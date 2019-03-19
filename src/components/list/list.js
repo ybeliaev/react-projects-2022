@@ -1,7 +1,7 @@
 import React, { useLayoutEffect } from "react";
 
 import ListItem from "../list-item";
-import "./list-item.css";
+import "./list.css";
 
 const List = ({ someData }) => {
   const elements = someData.map(item => {
