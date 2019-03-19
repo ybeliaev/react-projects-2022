@@ -39,8 +39,8 @@ export default class App extends Component {
     this.setState({ filter });
   };
   render() {
-    const { someData } = this.state;
-
+    const { todoData, search, filter } = this.state;
+    const visibleItems = this.makeFilter(this.search(todoData, search), filter);
     return (
       <div className="app">
         <h1>Filter of elements</h1>
