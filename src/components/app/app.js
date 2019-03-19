@@ -23,6 +23,18 @@ export default class App extends Component {
       id: this.maxId++
     };
   }
+  makeFilter(items, filter) {
+    switch (filter) {
+      case "all":
+        return items;
+      case "active":
+        return items.filter(elem => !elem.done);
+      case "done":
+        return items.filter(elem => elem.done);
+      default:
+        return items;
+    }
+  }
   makeFilterChange = filter => {
     this.setState({ filter });
   };
