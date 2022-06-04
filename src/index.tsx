@@ -1,16 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import App from './components/app/app'
 
+const Setting = {
+    ERROR_COUNT : 3,
+}
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <App errorsCount={Setting.ERROR_COUNT}/>
   </React.StrictMode>
 );
 
-reportWebVitals();
