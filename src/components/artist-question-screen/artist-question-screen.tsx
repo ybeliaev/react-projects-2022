@@ -1,5 +1,5 @@
 
-type ArtistQuestionScreenProps = null
+// type ArtistQuestionScreenProps = null
 
 
 
