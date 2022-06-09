@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98582743-a58a-4d5d-b5a5-8b79ae66c50a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/logo/logo.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/const.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/const.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/app/app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app/app.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +44,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Projects\react-projects-2022\src\components\logo" />
       <recent name="E:\Projects\react-projects-2022\src" />
     </key>
   </component>
@@ -65,7 +65,7 @@
       <workItem from="1654529031500" duration="4902000" />
       <workItem from="1654593214055" duration="1268000" />
       <workItem from="1654689179983" duration="2623000" />
-      <workItem from="1654768352168" duration="4688000" />
+      <workItem from="1654768352168" duration="6322000" />
     </task>
     <servers />
   </component>
