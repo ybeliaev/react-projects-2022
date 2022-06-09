@@ -1,8 +1,10 @@
+import Logo from "../logo/logo";
+
 function GenreQuestionScreen() : JSX.Element {
     return (
         <section className="game game--genre">
             <header className="game__header">
-                {/*<Logo />*/}
+                <Logo />
 
                 <svg xmlns="http://www.w3.org/2000/svg" className="timer" viewBox="0 0 780 780">
                     <circle className="timer__line" cx="390" cy="390" r="370"

@@ -1,25 +1,12 @@
-function WinScreen(): JSX.Element {
-    // const step = useAppSelector(getStep);
-    // const mistakes = useAppSelector(getMistakeCount);
-    //
-    // const dispatch = useAppDispatch();
-    // const navigate = useNavigate();
+import {Link} from "react-router-dom";
 
-    // const correctlyQuestionsCount = step - mistakes;
+function WinScreen(): JSX.Element {
+
 
     return (
         <section className="result">
             <div className="result-logout__wrapper">
-                {/*<Link*/}
-                {/*    className="result-logout__link"*/}
-                {/*    onClick={(evt) => {*/}
-                {/*        evt.preventDefault();*/}
-                {/*        dispatch(logoutAction());*/}
-                {/*    }}*/}
-                {/*    to='/'*/}
-                {/*>*/}
-                {/*    Выход*/}
-                {/*</Link>*/}
+                <Link className="result-logout__link" to="/">Выход</Link>
             </div>
             <div className="result__logo">
                 <img src="img/melody-logo.png" alt="Угадай мелодию" width="186" height="83" />
@@ -27,10 +14,6 @@ function WinScreen(): JSX.Element {
             <h2 className="result__title">Вы настоящий меломан!</h2>
             <p className="result__total">Вы ответили правильно на {0} вопросов и совершили {0} ошибки</p>
             <button
-                // onClick={() => {
-                //     dispatch(resetGame());
-                //     navigate(AppRoute.Game);
-                // }}
                 className="replay"
                 type="button"
             >

@@ -1,6 +1,6 @@
 import {Link} from "react-router-dom";
 
-function Logo(): JSX.Element{
+export default function Logo(): JSX.Element{
     return (
         <Link className="game__back" to="/">
             <span className="visually-hidden">Сыграть ещё</span>
