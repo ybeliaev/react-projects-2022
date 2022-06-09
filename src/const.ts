@@ -1,4 +1,4 @@
-export enum AppRoute{
+export enum AppRoute {
     Login = '/login',
     Lose = '/lose',
     Result = '/result',
