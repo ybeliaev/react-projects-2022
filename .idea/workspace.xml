@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98582743-a58a-4d5d-b5a5-8b79ae66c50a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/private-route/private-route.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mocks/questions.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/types/question.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/app/app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app/app.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/const.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/const.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,8 +14,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -67,7 +66,10 @@
       <workItem from="1654529031500" duration="4902000" />
       <workItem from="1654593214055" duration="1268000" />
       <workItem from="1654689179983" duration="2623000" />
-      <workItem from="1654768352168" duration="9658000" />
+      <workItem from="1654768352168" duration="10292000" />
+      <workItem from="1655058919332" duration="7000" />
+      <workItem from="1655215805534" duration="2442000" />
+      <workItem from="1655364813105" duration="1627000" />
     </task>
     <servers />
   </component>
