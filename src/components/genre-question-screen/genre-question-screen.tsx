@@ -1,6 +1,13 @@
 import Logo from "../logo/logo";
+import {QuestionGenre} from "../../types/question";
 
-function GenreQuestionScreen() : JSX.Element {
+type GenreQuestionScreenProps = {
+    question: QuestionGenre;
+};
+
+function GenreQuestionScreen(props: GenreQuestionScreenProps) : JSX.Element {
+    const {question} = props;
+    const {answers, genre} = question;
     return (
         <section className="game game--genre">
             <header className="game__header">
@@ -12,16 +19,39 @@ function GenreQuestionScreen() : JSX.Element {
                     />
                 </svg>
 
-                {/*{children}*/}
+                <div className="game__mistakes">
+                    <div className="wrong"/>
+                    <div className="wrong"/>
+                    <div className="wrong"/>
+                </div>
             </header>
 
             <section className="game__screen">
-                <h2 className="game__title">Выберите {1} треки</h2>
-                {/*<GenreQuestionList*/}
-                {/*    question={question}*/}
-                {/*    onAnswer={onAnswer}*/}
-                {/*    renderPlayer={renderPlayer}*/}
-                {/*/>*/}
+                <h2 className="game__title">Выберите {genre} треки</h2>
+                <form className="game__tracks">
+                    {
+                        answers.map((answer, idx) => {
+                            const keyValue = `${idx}-${answer.src}`
+                            return(
+                                <div key={keyValue} className="track">
+                                    <button className="track__button track__button--play" type="button"/>
+                                    <div className="track__status">
+                                        <audio
+                                            src={answer.src}
+                                        />
+                                    </div>
+                                    <div className="game__answer">
+                                        <input className="game__input visually-hidden" type="checkbox" name="answer" value={`answer-${id}`}
+                                               id={`answer-${id}`}
+                                        />
+                                        <label className="game__check" htmlFor={`answer-${id}`}>Отметить</label>
+                                    </div>
+                                </div>
+                            )
+                        })
+                    }
+                    <button className="game__submit button" type="submit">Ответить</button>
+                </form>
             </section>
         </section>
     )
