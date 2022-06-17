@@ -10,7 +10,7 @@ import WinScreen from "../win-screen/win-screen";
 import NotFoundScreen from "../not-found-screen/not-found-screen";
 
 import PrivateRoute from "../private-route/private-route";
-import {Questions, QuestionGenre} from "../../types/question";
+import {Questions, QuestionGenre, QuestionArtist} from "../../types/question";
 
 
 
@@ -21,7 +21,7 @@ type AppScreenProps = {
 
 function App({errorsCount, questions}: AppScreenProps): JSX.Element{
 
-    const [firstQuestion] = questions; //{type: 'genre', genre: 'rock', answers: Array(4)}
+    const [firstQuestion, secondQuestion] = questions; //{type: 'genre', genre: 'rock', answers: Array(4)}
     console.log(firstQuestion)
     return (
         <BrowserRouter>
@@ -32,7 +32,15 @@ function App({errorsCount, questions}: AppScreenProps): JSX.Element{
                 />
                 <Route
                     path={AppRoute.DevArtist}
-                    element={<ArtistQuestionScreen />}
+                    element={
+                        <ArtistQuestionScreen
+                            question={secondQuestion as QuestionArtist}
+                            onAnswer={() => {
+                                throw new Error('Function \'onAnswer\' isn\'t implemented.');
+                            }}
+                        />
+                    }
+
                 />
                 <Route
                     path={AppRoute.DevGenre}
