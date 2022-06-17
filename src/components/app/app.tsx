@@ -38,6 +38,9 @@ function App({errorsCount, questions}: AppScreenProps): JSX.Element{
                     path={AppRoute.DevGenre}
                     element={<GenreQuestionScreen
                         question={firstQuestion as QuestionGenre}
+                        onAnswer={()=>{
+                            throw new Error('Function \'onAnswer\' isn\'t implemented.')
+                        }}
                     />}
                 />
                 <Route

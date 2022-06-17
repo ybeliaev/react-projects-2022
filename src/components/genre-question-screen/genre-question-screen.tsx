@@ -1,13 +1,14 @@
-import {ChangeEvent, useState} from "react";
+import {ChangeEvent, FormEvent, useState} from "react";
 import Logo from "../logo/logo";
-import {QuestionGenre} from "../../types/question";
+import {QuestionGenre, UserGenreQuestionAnswer} from "../../types/question";
 
 type GenreQuestionScreenProps = {
     question: QuestionGenre;
+    onAnswer: (question: QuestionGenre, answers: UserGenreQuestionAnswer) => void;
 };
 
 function GenreQuestionScreen(props: GenreQuestionScreenProps) : JSX.Element {
-    const {question} = props;
+    const {question, onAnswer} = props;
     const {answers, genre} = question;
 
     const [userAnswers, setUserAnswers] = useState([false, false, false, false]);
@@ -32,7 +33,13 @@ function GenreQuestionScreen(props: GenreQuestionScreenProps) : JSX.Element {
 
             <section className="game__screen">
                 <h2 className="game__title">Выберите {genre} треки</h2>
-                <form className="game__tracks">
+                <form
+                    className="game__tracks"
+                    onSubmit={(event: FormEvent<HTMLFormElement>)=>{
+                        event.preventDefault()
+                        onAnswer(question, userAnswers);
+                    }}
+                >
                     {
                         answers.map((answer, idx) => {
                             const keyValue = `${idx}-${answer.src}`
